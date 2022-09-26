@@ -1,9 +1,11 @@
 input.onButtonPressed(Button.A, function () {
-    if (school == true) {
-        basic.showString("go to school")
+    if (number == 0) {
+        basic.showIcon(IconNames.Sad)
+    } else if (number == 1) {
+        basic.showIcon(IconNames.Asleep)
     } else {
-        basic.showString("stay home")
+        basic.showIcon(IconNames.Happy)
     }
 })
-let school = false
-school = true
+let number = 0
+number = randint(0, 2)
